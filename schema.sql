@@ -1,3 +1,9 @@
+-- Suppression des tables existantes
+DROP TABLE IF EXISTS coordonnees;
+DROP TABLE IF EXISTS contacts;
+DROP TABLE IF EXISTS agendas;
+DROP TABLE IF EXISTS utilisateurs;
+
 -- Création de la table des utilisateurs
 CREATE TABLE utilisateurs (
                               id SERIAL PRIMARY KEY,
@@ -22,3 +28,20 @@ CREATE TABLE agendas (
 INSERT INTO agendas (utilisateur_id, label) VALUES
     (1, 'Agenda personnel d''Alice'),
 (2, 'Agenda professionnel de Bob');
+
+-- Création de la table des contacts
+CREATE TABLE contacts (
+    id SERIAL PRIMARY KEY,
+    agenda_id INT REFERENCES agendas(id),
+    nom VARCHAR(100)
+    -- Ajoutez d'autres colonnes si nécessaire
+    );
+
+-- Création de la table des coordonnées
+CREATE TABLE coordonnees (
+                             id SERIAL PRIMARY KEY,
+                             contact_id INT REFERENCES contacts(id),
+                             type VARCHAR(50),
+                             valeur TEXT
+    -- Ajoutez d'autres colonnes si nécessaire
+);
