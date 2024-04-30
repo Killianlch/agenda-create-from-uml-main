@@ -4,15 +4,24 @@ const PORT = process.env.PORT || 3000;
 
 // Importer les routes
 const userRoutes = require('./routes/userRoutes');
+const authRoutes = require('./routes/authRoutes');
+
+
 
 // Middleware pour parser les requêtes JSON
 app.use(express.json());
+
+app.set('views', './src/public/views');
+app.set('view engine', 'pug');
+
+//app.set('view engine', 'html');
 
 // Importer Sequelize et initialiser la connexion à la base de données
 const sequelize = require('../database/connection');
 
 // Utiliser les routes
 app.use('/users', userRoutes);
+app.use('/login', authRoutes);
 
 // Route racine
 app.get('/', (req, res) => {

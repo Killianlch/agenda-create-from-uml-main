@@ -4,6 +4,7 @@
   "description": "Lors de cet atelier, l’apprenant doit :   -  A partir des diagrammes de classes et des diagrammes de composants d’une étude  de cas donnée par l’intervenant, développer et tester les composants de la couche  métier d’une application informatique.",
   "main": "index.js",
   "scripts": {
+    "node": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
     "express": "^4.19.2",
     "pg": "^8.11.5",
     "pg-hstore": "^2.3.4",
+    "pug": "^3.0.2",
     "sequelize": "^6.37.3"
   }
 }
