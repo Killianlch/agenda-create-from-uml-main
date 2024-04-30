@@ -1,0 +1,406 @@
+.frame-child {
+    position: absolute;
+    top: 51px;
+    left: 0px;
+    background-color: #3c3e47;
+    width: 247px;
+    height: 839px;
+}
+
+.se-dconnecter {
+    position: absolute;
+    height: 4.4%;
+    width: 17.26%;
+    top: 95.59%;
+    left: 0%;
+    font-size: 16px;
+    font-family: Arial;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-account-logout {
+    position: absolute;
+    height: 2.47%;
+    width: 1.68%;
+    top: 96.52%;
+    right: 96.29%;
+    bottom: 1.01%;
+    left: 2.04%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.accueil {
+    position: absolute;
+    top: 8.54%;
+    left: 4.81%;
+    font-size: 16px;
+    font-family: Arial;
+    color: #fff;
+}
+
+.icon-home {
+    position: absolute;
+    height: 2.52%;
+    width: 1.69%;
+    top: 8.09%;
+    right: 96.49%;
+    bottom: 89.39%;
+    left: 1.82%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.frame-item {
+    position: absolute;
+    height: 4.49%;
+    width: 17.26%;
+    top: 12.13%;
+    right: 82.74%;
+    bottom: 83.37%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.general {
+    position: absolute;
+    top: 13.48%;
+    left: 1.46%;
+    font-family: Arial;
+    color: #fff;
+}
+
+.frame-inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #5ea3e2;
+    width: 1373px;
+    height: 51px;
+}
+
+.rectangle-div {
+    position: absolute;
+    top: 51px;
+    left: 247px;
+    background-color: #d9d9d9;
+    width: 1126px;
+    height: 839px;
+}
+
+.frame-child1 {
+    position: absolute;
+    top: 109px;
+    left: 263px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    width: 1089px;
+    height: 759px;
+}
+
+.frame-child2 {
+    position: absolute;
+    top: 177px;
+    left: 275px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #eee;
+    width: 1066px;
+    height: 84px;
+    mix-blend-mode: normal;
+}
+
+.div {
+    position: absolute;
+    top: 220px;
+    left: 307px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 41px;
+}
+
+.john-doe {
+    position: absolute;
+    top: 219px;
+    left: 451px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 41px;
+}
+
+.div1 {
+    position: absolute;
+    top: 219px;
+    left: 788px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 41px;
+}
+
+.emailgmailcom {
+    position: absolute;
+    top: 219px;
+    left: 963px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 41px;
+}
+
+.button-deletee-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 10px;
+    background-color: #d14242;
+}
+
+.icon-trash {
+    position: absolute;
+    height: 41.71%;
+    width: 32.61%;
+    top: 26.83%;
+    right: 34.78%;
+    bottom: 31.46%;
+    left: 32.61%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.button-deletee {
+    position: absolute;
+    top: 220px;
+    left: 1295px;
+    width: 46px;
+    height: 41px;
+}
+
+.frame-child3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 10px;
+    background-color: #5ea3e2;
+}
+
+.icon-pencil {
+    position: absolute;
+    height: 36.59%;
+    width: 32.61%;
+    top: 31.71%;
+    right: 34.78%;
+    bottom: 31.71%;
+    left: 32.61%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.rectangle-group {
+    position: absolute;
+    top: 220px;
+    left: 1249px;
+    width: 46px;
+    height: 41px;
+}
+
+.frame-child4 {
+    position: absolute;
+    top: 177px;
+    left: 275px;
+    background-color: #d9d9d9;
+    width: 1066px;
+    height: 43px;
+}
+
+.adresse {
+    position: absolute;
+    top: 191px;
+    left: 643px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 56px;
+}
+
+.nom {
+    position: absolute;
+    top: 190px;
+    left: 481px;
+    text-align: left;
+}
+
+.id {
+    position: absolute;
+    top: 191px;
+    left: 319px;
+    text-align: left;
+}
+
+.tlphone {
+    position: absolute;
+    top: 187px;
+    left: 829px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 24px;
+}
+
+.email {
+    position: absolute;
+    top: 187px;
+    left: 1029px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 38px;
+    height: 24px;
+}
+
+.site-web {
+    position: absolute;
+    top: 191px;
+    left: 1197px;
+    text-align: left;
+    display: inline-block;
+    width: 60px;
+    height: 16px;
+}
+
+.bouton-exporter-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 5px;
+    background-color: #969696;
+}
+
+.nouveau {
+    position: absolute;
+    top: 8px;
+    left: 26px;
+}
+
+.icon-plus {
+    position: absolute;
+    height: 40%;
+    width: 13.48%;
+    top: 30%;
+    right: 79.78%;
+    bottom: 30%;
+    left: 6.74%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.bouton-exporter1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.bouton-exporter {
+    position: absolute;
+    top: 131px;
+    left: 392px;
+    width: 89px;
+    height: 30px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.bouton-nouveau-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 5px;
+    background-color: #5ea3e2;
+}
+
+.nouveau1 {
+    position: absolute;
+    top: 8px;
+    left: 25px;
+}
+
+.bouton-nouveau {
+    position: absolute;
+    top: 131px;
+    left: 285px;
+    width: 89px;
+    height: 30px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.icon-person {
+    position: absolute;
+    height: 2.47%;
+    width: 1.6%;
+    top: 23.93%;
+    right: 96.5%;
+    bottom: 73.6%;
+    left: 1.89%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.contacts {
+    position: absolute;
+    top: 24.16%;
+    left: 4.95%;
+    font-size: 16px;
+    font-family: Arial;
+    color: #fff;
+}
+
+.rectangle-parent {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 890px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    font-family: Inter;
+}
