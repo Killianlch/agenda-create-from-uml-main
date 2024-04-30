@@ -1,0 +1,15 @@
+{
+  "name": "agenda-create-from-uml-main",
+  "version": "1.0.0",
+  "description": "Lors de cet atelier, l’apprenant doit :   -  A partir des diagrammes de classes et des diagrammes de composants d’une étude  de cas donnée par l’intervenant, développer et tester les composants de la couche  métier d’une application informatique.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
