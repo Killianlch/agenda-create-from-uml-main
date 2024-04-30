@@ -2,11 +2,6 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Importer la configuration de la base de données
-// Importer la configuration de la base de données
-const connectDB = require('./db');
-connectDB();
-
 // Importer les routes
 const userRoutes = require('./routes/userRoutes');
 
