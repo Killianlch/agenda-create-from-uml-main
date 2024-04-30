@@ -4,44 +4,59 @@ DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS agendas;
 DROP TABLE IF EXISTS utilisateurs;
 
--- Création de la table des utilisateurs
-CREATE TABLE utilisateurs (
-                              id SERIAL PRIMARY KEY,
-                              nom VARCHAR(100),
-                              email VARCHAR(100) UNIQUE,
-                              mot_de_passe VARCHAR(100)
+CREATE TABLE User (
+                      id INT PRIMARY KEY AUTO_INCREMENT,
+                      login VARCHAR(255) NOT NULL,
+                      password VARCHAR(255) NOT NULL,
+                      jwt VARCHAR(255)
 );
 
--- Insertion de données dans la table des utilisateurs
-INSERT INTO utilisateurs (nom, email, mot_de_passe) VALUES
-                                                        ('Alice', 'alice@example.com', 'motdepasse1'),
-                                                        ('Bob', 'bob@example.com', 'motdepasse2');
-
--- Création de la table des agendas
-CREATE TABLE agendas (
-                         id SERIAL PRIMARY KEY,
-                         utilisateur_id INT REFERENCES utilisateurs(id),
-                         label VARCHAR(100)
+CREATE TABLE Agenda (
+                        id INT PRIMARY KEY AUTO_INCREMENT,
+                        user_id INT,
+                        label VARCHAR(255),
+                        FOREIGN KEY (user_id) REFERENCES User(id)
 );
 
--- Insertion de données dans la table des agendas
-INSERT INTO agendas (utilisateur_id, label) VALUES
-    (1, 'Agenda personnel d''Alice'),
-(2, 'Agenda professionnel de Bob');
+CREATE TABLE Contact (
+                         id INT PRIMARY KEY AUTO_INCREMENT,
+                         agenda_id INT,
+                         name VARCHAR(255),
+                         FOREIGN KEY (agenda_id) REFERENCES Agenda(id)
+);
 
--- Création de la table des contacts
-CREATE TABLE contacts (
-    id SERIAL PRIMARY KEY,
-    agenda_id INT REFERENCES agendas(id),
-    nom VARCHAR(100)
-    -- Ajoutez d'autres colonnes si nécessaire
-    );
+CREATE TABLE ContactDetail (
+                               id INT PRIMARY KEY AUTO_INCREMENT,
+                               contact_id INT,
+                               value VARCHAR(255),
+                               pattern VARCHAR(255),
+                               FOREIGN KEY (contact_id) REFERENCES Contact(id)
+);
 
--- Création de la table des coordonnées
-CREATE TABLE coordonnees (
-                             id SERIAL PRIMARY KEY,
-                             contact_id INT REFERENCES contacts(id),
-                             type VARCHAR(50),
-                             valeur TEXT
-    -- Ajoutez d'autres colonnes si nécessaire
+CREATE TABLE Address (
+                         id INT PRIMARY KEY,
+                         contact_detail_id INT,
+                         pattern VARCHAR(255),
+                         FOREIGN KEY (contact_detail_id) REFERENCES ContactDetail(id)
+);
+
+CREATE TABLE Phone (
+                       id INT PRIMARY KEY,
+                       contact_detail_id INT,
+                       pattern VARCHAR(255),
+                       FOREIGN KEY (contact_detail_id) REFERENCES ContactDetail(id)
+);
+
+CREATE TABLE Email (
+                       id INT PRIMARY KEY,
+                       contact_detail_id INT,
+                       pattern VARCHAR(255),
+                       FOREIGN KEY (contact_detail_id) REFERENCES ContactDetail(id)
+);
+
+CREATE TABLE Website (
+                         id INT PRIMARY KEY,
+                         contact_detail_id INT,
+                         pattern VARCHAR(255),
+                         FOREIGN KEY (contact_detail_id) REFERENCES ContactDetail(id)
 );
