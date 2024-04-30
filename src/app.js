@@ -8,6 +8,9 @@ const userRoutes = require('./routes/userRoutes');
 // Middleware pour parser les requêtes JSON
 app.use(express.json());
 
+// Importer Sequelize et initialiser la connexion à la base de données
+const sequelize = require('../database/connection');
+
 // Utiliser les routes
 app.use('/users', userRoutes);
 
@@ -17,11 +20,14 @@ app.get('/', (req, res) => {
 });
 
 // Gérer les erreurs de connexion à la base de données
-app.on('error', (err) => {
-    console.error('Server error:', err);
-});
-
-// Lancer le serveur
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connection to the database has been established successfully.');
+        // Lancer le serveur une fois la connexion établie
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });

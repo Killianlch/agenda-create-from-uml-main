@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 const getAllUsers = async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.findAll(); // Utilise la méthode findAll de Sequelize pour récupérer tous les utilisateurs
         res.json(users);
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -10,13 +10,10 @@ const getAllUsers = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-    const user = new User({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    });
+    const { username, email, password } = req.body; // Récupère les données du corps de la requête
     try {
-        const newUser = await user.save();
+        // Crée un nouvel utilisateur dans la base de données
+        const newUser = await User.create({ username, email, password });
         res.status(201).json(newUser);
     } catch (err) {
         res.status(400).json({ message: err.message });
